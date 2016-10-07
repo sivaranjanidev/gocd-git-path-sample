@@ -10,7 +10,11 @@ pipelines:
           jobs:
             build:
               tasks:
-               - script: ./run.sh action
+                - exec:
+                    command: /bin/sh
+                    arguments:
+                      - "-c"
+                      - "run.sh action"
   "animation-movies":
     group: movies
     materials:
@@ -21,4 +25,8 @@ pipelines:
           jobs:
             build:
               tasks:
-               - script: ./run.sh animation
+                - exec:
+                    command: /bin/sh
+                    arguments:
+                      - "-c"
+                      - "run.sh animation"
