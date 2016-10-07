@@ -13,6 +13,7 @@ pipelines:
                 - exec:
                     command: "/bin/bash"
                     arguments:
+                      - "-c"
                       - "./run.sh action"
   "animation-movies":
     group: movies
@@ -27,4 +28,5 @@ pipelines:
                 - exec:
                     command: "/bin/bash"
                     arguments:
+                      - "-c"
                       - "./run.sh animation"
