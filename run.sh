@@ -1,3 +1,5 @@
+#! /bin/bash
+
 function show_movies() {
   cat $1/movies.txt
 }
