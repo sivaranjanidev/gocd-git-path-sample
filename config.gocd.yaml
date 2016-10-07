@@ -4,7 +4,7 @@ pipelines:
     group: movies
     materials:
       sample:
-        git: https://github.com/TWChennai/gocd-git-path-sample.git
+        scm: 66458a7e-80f8-4355-bc1a-a41509396ae6
     stages:
       - build:
           jobs:
