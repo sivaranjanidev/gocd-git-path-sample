@@ -1,6 +1,6 @@
 # simple.gocd.yaml
 pipelines:
-  hollywood:
+  "action-movies":
     group: movies
     materials:
       sample:
@@ -11,3 +11,14 @@ pipelines:
             build:
               tasks:
                - script: ./run.sh action
+  "animation-movies":
+    group: movies
+    materials:
+      sample:
+        scm: 00f75478-0176-4070-8cae-d197f846359c
+    stages:
+      - build:
+          jobs:
+            build:
+              tasks:
+               - script: ./run.sh animation
