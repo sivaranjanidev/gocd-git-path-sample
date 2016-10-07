@@ -1,24 +1,13 @@
-environments:
-  ci:
-    environment_variables:
-      genre: action
-    pipelines:
-      - movies
+# simple.gocd.yaml
 pipelines:
-  Movies:
-    group: cinema
+  hollywood:
+    group: movies
     materials:
-      git:
-        scm: GitPathMaterial
-        url: https://github.com/TWChennai/gocd-git-path-sample.git
+      sample:
+        git: https://github.com/TWChennai/gocd-git-path-sample.git
     stages:
-      - build: # name of stage
+      - build:
           jobs:
-            print: # name of the job
+            build:
               tasks:
-                - exec: # indicates type of task
-                    command: /bin/bash
-                    arguments:
-                      - "-c"
-                      - "run.sh"
-
+               - script: ./run.sh action
